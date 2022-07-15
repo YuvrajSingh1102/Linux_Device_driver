@@ -1,0 +1,1 @@
+cmd_/home/einfochips/Desktop/Linux_device_driver/workspace/lld/custom_drivers/002pseudo_char_driver/pcd.mod := { echo  /home/einfochips/Desktop/Linux_device_driver/workspace/lld/custom_drivers/002pseudo_char_driver/pcd.o;  echo; } > /home/einfochips/Desktop/Linux_device_driver/workspace/lld/custom_drivers/002pseudo_char_driver/pcd.mod
