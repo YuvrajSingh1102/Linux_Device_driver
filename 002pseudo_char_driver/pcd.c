@@ -18,6 +18,8 @@ dev_t device_number;
 /* Cdev variable */
 struct cdev pcd_cdev;
 
+static int number_open = 0;
+
 loff_t pcd_lseek (struct file *filp, loff_t offset, int whence)
 {
 	loff_t temp;
@@ -102,11 +104,13 @@ ssize_t pcd_write (struct file *filp, const char __user *buff, size_t count, lof
 	pr_info("Updated the file = %lld\n", *f_pos);
 
 	/* Return number of bytes which have been successful written */
-	return count;
+	return (count);
 }
 int pcd_open (struct inode *inode, struct file *filp)
 {
+	number_open++;
 	pr_info("Open was successful\n");
+	pr_info("Device has been opened %d this many times\n", number_open);
 	return 0;
 }
 int pcd_release (struct inode *inode, struct file *filp)
